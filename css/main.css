@@ -1,0 +1,146 @@
+:root {
+    --dark: #121212;
+    --less-dark: #1D1D1D;
+    --gray: #DDDDDD; 
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    min-width: 100%;
+    font-family: 'Mulish', sans-serif;
+    background-color: var(--dark);
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 400;
+    color: rgb(173, 55, 104);
+    transition: all 0.2s ease-out;
+}
+
+a:hover {
+    color: rgb(117, 32, 68);
+}
+
+h1, p {
+    color: var(--gray);
+}
+
+p {
+    line-height: 1.5;
+    display: none;
+    pointer-events: none;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: var(--white);
+}
+
+header nav {
+    margin: 0 auto;
+}
+
+.logo {
+    max-width: 128px;
+}
+
+.logo img {
+    max-width: 100%;
+}
+
+.menu ul {
+    display: flex;
+}
+
+.menu ul li {
+    margin-left: 0.8rem;
+}
+
+/* main container */
+.faq-container {
+    padding: 1rem;
+    width: 100%;
+}
+
+.faq-container h1 {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+/* faq sections selector */
+.faq-sections-selector {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.faq-sections-selector ul {
+    display: flex;;
+}
+
+.faq-sections-selector ul li:nth-child(1) {
+    margin-right: 0.8rem;
+}
+
+/* far title */
+.faq-title {
+    background-color: var(--less-dark);
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.faq-title > a {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    pointer-events: none;
+}
+
+.faq-text.active {
+    display: block;
+}
+
+.social-link {
+    pointer-events: initial;
+}
+
+/* section hide*/
+
+.section-2-container {
+    display: none;
+}
+
+@media (min-width: 768px) {
+
+    .section-1-container, .section-2-container {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .menu ul li {
+        margin-left: 1.2rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    .section-1-container, .section-2-container {
+        max-width: 60%;
+    }
+}
