@@ -3,6 +3,7 @@
     --less-dark: #1D1D1D;
     --gray: #DDDDDD; 
     --white: #fff;
+    --accent: rgb(173, 55, 104);
 }
 
 * {
@@ -25,8 +26,7 @@ li {
 a {
     text-decoration: none;
     font-weight: 400;
-    color: rgb(173, 55, 104);
-    transition: all 0.2s ease-out;
+    color: var(--accent);
 }
 
 a:hover {
@@ -38,9 +38,7 @@ h1, p {
 }
 
 p {
-    line-height: 1.5;
-    display: none;
-    pointer-events: none;
+    line-height: 1.3;
 }
 
 /* Header */
@@ -97,32 +95,33 @@ header nav {
     margin-right: 0.8rem;
 }
 
-/* far title */
-.faq-title {
-    background-color: var(--less-dark);
-    padding: 0.5rem;
+/* faq item */
+.faq-item {
     margin-bottom: 0.5rem;
 }
+/* far title */
+.faq-title, .faq-text {
+    padding: 0.5rem;
+}
 
-.faq-title > a {
+.faq-title {
+    background-color: var(--less-dark);
+    color: var(--accent);
     display: flex;
-    flex-direction: row-reverse;
     justify-content: space-between;
+}
+
+.faq-text {
+    display: none;
+    background-color: var(--less-dark);
     margin-bottom: 0.5rem;
-    font-size: 1.1rem;
-    pointer-events: none;
 }
 
 .faq-text.active {
     display: block;
 }
 
-.social-link {
-    pointer-events: initial;
-}
-
 /* section hide*/
-
 .section-2-container {
     display: none;
 }
